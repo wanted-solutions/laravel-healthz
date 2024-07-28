@@ -1,0 +1,41 @@
+{
+    "name": "wanted-solutions/laravel-package",
+    "description": "Dashboard and code-driven configuration for Laravel queues.",
+    "keywords": ["laravel", "queue"],
+    "license": "Apache-2.0",
+    "authors": [],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.4",
+        "predis/predis": "^1.1|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wanted\\Solutions\\Laravel\\Package\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wanted\\Solutions\\Laravel\\Package\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wanted\\Solutions\\Laravel\\Package\\ServiceProvider"
+            ],
+            "aliases": {
+                "WNTDPackage": "Wanted\\Solutions\\Laravel\\Package\\Facades\\Package"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+    }
+}
